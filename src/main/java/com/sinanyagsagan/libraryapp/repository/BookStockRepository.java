@@ -18,4 +18,12 @@ public interface BookStockRepository extends JpaRepository<BookStock, Long> {
     @Query("SELECT b FROM BookStock b WHERE b.book.id = :bookId")
     List<BookStock> findStockByBookId(@Param("bookId") Long bookId);
 
+
+    @Query("SELECT bs FROM BookStock bs WHERE bs.bookOffice = :office AND bs.book.id = :bookId")
+    List<BookStock> findStockIdByBookOfficeAndBookId(
+            @Param("office") BookOffice office,
+            @Param("bookId") Long bookId
+    );
+
+
 }

@@ -50,6 +50,11 @@ public class BookStockService {
         return bookStockRepository.findStockByBookId(bookId);
     }
 
+    public List<BookStock> findStockIdByBookOfficeAndBookId(Long bookId, String bookOffice){
+        return bookStockRepository.findStockIdByBookOfficeAndBookId(BookOffice.valueOf(bookOffice), bookId);
+    }
+
+
     public boolean updateBookStock(Long stockId, BookStockSaveRequestDto updateStock) {
         Optional<BookStock> optionalExistStock = bookStockRepository.findById(stockId);
         if (optionalExistStock.isPresent()){
