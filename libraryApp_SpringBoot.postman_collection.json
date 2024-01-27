@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "1b611f26-c997-4c61-b87d-f9a62b9aed4d",
+		"name": "libraryApp_SpringBoot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16507711"
+	},
+	"item": [
+		{
+			"name": "Book APIs",
+			"item": [
+				{
+					"name": "http://localhost:8080/book/saveBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookName\": \"The Lord of the Rings 3\",\r\n  \"bookAuthor\": \"J. R. R. Tolkien\",\r\n  \"bookISBN\": \"9780261102385\",\r\n  \"bookLanguage\": \"English\",\r\n  \"bookVolumeNo\": 15,\r\n  \"bookCategory\": \"ADVENTURE\",\r\n  \"publisher\": \"Tolkien\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/book/saveBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"saveBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/book/deleteBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\" : 103\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/book/deleteBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"deleteBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/book/getAllBooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/book/getAllBooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"getAllBooks"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/book/getById?bookId=102",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/book/getById?bookId=202",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "bookId",
+									"value": "202"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/book/getByBookName/ring",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/book/getByBookName/Book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"getByBookName",
+								"Book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/book/updateBook/103",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookVolumeNo\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/book/updateBook/152",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"updateBook",
+								"152"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BookStock APIs",
+			"item": [
+				{
+					"name": "http://localhost:8080/bookStock/saveStock",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\": 102,\r\n    \"bookStock\": 400,\r\n    \"bookOffice\" : \"KADIKOY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookStock/saveStock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookStock",
+								"saveStock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/bookStock/deleteStock",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookStockId\": \"503\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookStock/deleteStock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookStock",
+								"deleteStock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/bookStock/getAllStock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bookStock/getAllStock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookStock",
+								"getAllStock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/bookStock/getByStockOffice/USKUDAR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bookStock/getByStockOffice/USKUDAR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookStock",
+								"getByStockOffice",
+								"USKUDAR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/bookStock/getByStockBookId/102",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bookStock/getByStockBookId/102",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookStock",
+								"getByStockBookId",
+								"102"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/bookStock/updateStock/552",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookStock\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookStock/updateStock/552",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookStock",
+								"updateStock",
+								"552"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer APIs",
+			"item": [
+				{
+					"name": "http://localhost:8080/customer/saveCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerName\": \"Eva\",\r\n  \"customerSurname\": \"Miller\",\r\n  \"customerPhone\": \"+4455667788\",\r\n  \"customerAddress\": \"101 Maple Lane, Hamlet City\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/saveCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"saveCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/customer/deleteCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerId\": 52\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/deleteCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"deleteCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/customer/getAllCustomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer/getAllCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"getAllCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/customer/getById?customerId=2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer/getById?customerId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/customer/updateCustomer/3",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerPhone\": \"PHONE UPDATED\",\r\n    \"customerAddress\": \"103 Maple Lane, Hamlet City\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/updateCustomer/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"updateCustomer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Library APIs",
+			"item": [
+				{
+					"name": "http://localhost:8080/library/takeIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": 53,\r\n    \"bookId\": 102,\r\n    \"bookOffice\": \"USKUDAR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/library/takeIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"library",
+								"takeIn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
